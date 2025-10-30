@@ -4,5 +4,10 @@ DeepSeek-V3 是一个 MoE（Mixture-of-Experts）模型，标称参数量约为 
 也需要 数百 GB 到 TB 级显存 才能完全加载全量模型权重 故不能在单卡低显存设备上完成部署
 RTX 3060 ≈ 12 GB 显存，只能加载极小的模型（例如 1 B – 3 B 参数级）
 
+## 单卡部署DeepSeek蒸馏模型
 
+vllm serve deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B \
+  --trust-remote-code \
+  --dtype bfloat16 \
+  --gpu-memory-utilization 0.9 
 

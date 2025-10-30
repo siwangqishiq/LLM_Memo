@@ -2,7 +2,7 @@
 
 启动LLM服务后针对 以下性能指标的测量方法: 
     1. 吞吐量 throughput
-    2. 延迟 latency 
+    2. 延迟 latency
     3. 资源使用 CPU/GPU/Memory
     4. 请求并发能力
     5. Token消耗
@@ -101,3 +101,8 @@ if __name__ == "__main__":
     asyncio.run(main())
 
 ```
+
+
+## 使用 locust 测试并发性能
+
+### 安装 pip install locust requests
